@@ -29,7 +29,7 @@ class Results(Page):
         return dict(offer=Constants.endowment - self.group.kept)
 
     def before_next_page(self):
-        DataExport.objects.create(group=self.group, kept=self.group.kept)
+        DataExport.objects.create(group=1, kept=self.group.kept)
 
 
 page_sequence = [Introduction, Offer, ResultsWaitPage, Results]
